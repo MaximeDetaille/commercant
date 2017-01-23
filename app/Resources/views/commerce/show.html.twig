@@ -1,0 +1,65 @@
+{% extends 'siteTemplate.html.twig' %}
+
+{% block title %}{{ commerce.nom }}{% endblock %}
+
+{% block navbar %}
+    <nav class="navbarTemplate navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('homepage') }}">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="logBtn" href="{{ path('commerce_index') }}">Commercant</a></li>
+                    <li><a class="logBtn" href="{{ path('login') }}">Connexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ commerce.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ commerce.nom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ commerce.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ commerce.image }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ commerce.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('commerce_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('commerce_edit', { 'id': commerce.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

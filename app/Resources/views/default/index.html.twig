@@ -1,0 +1,64 @@
+{% extends 'navbar.html.twig' %}
+
+{% block body %}
+    <div class="bigDiv">
+        <div class="jumbotron jumbo">
+            <div class="col-sm-6 col-sm-push-3 text-center mainForm">
+                <h1>Projet</h1>
+                <form action="{{ path('commerce_index') }}">
+                    <img class="imgBar" src="{{ asset('img/search.png') }}"/>
+                    <input name="nom" class="commercant" placeholder="Trouver un commercant" type="text">
+                    <input name="adresse" class="ou" placeholder="Où ?" type="text">
+                    <img class="imgLoca" src="{{ asset('img/loca.png') }}"/>
+                    <input class="localisation" type="text">
+                    <button hidden type="submit"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container containerPres">
+            <div class="presentation">
+                <h1 class="text-center">Présentation</h1>
+                <div class="row divPres">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center borderRight">
+                        <img class="pictoPres" src="{{ asset('img/pointLoca.png') }}"/>
+                        <p class="pPres">Trouver un commercant <br/> près de chez vous</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center borderRight">
+                        <img class="pictoPres" src="{{ asset('img/pc.png') }}"/>
+                        <p class="pPres">Rendez-vous sur <br/> sa page personnelle</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+                        <img class="pictoPres" src="{{ asset('img/shop.png') }}"/>
+                        <p class="pPres">Commandez vos produits <br/> et allez les chercher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid divCommercant">
+            <h1 class="text-center commercantDiv titlePicto">Vous êtes commercant ?</h1>
+            <div class="row text-center">
+                <img class="trait1" src="{{ asset('img/trait1.png') }}">
+                <img class="trait2" src="{{ asset('img/trait2.png') }}">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <h3 class="titlePicto">Créer vous un compte <br/> commercant</h3>
+                    <img class="pictoCom" src="{{ asset('img/plusWhite.png') }}"/>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 divDeux">
+                    <h3 class="titlePicto">Commencer à <br/> personnaliser votre <br> page personnelle</h3>
+                    <img class="pictoCom" src="{{ asset('img/tools.png') }}"/>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 divDeux">
+                    <h3 class="titlePicto">Recevez vos <br/> première commandes</h3>
+                    <img class="pictoCom" src="{{ asset('img/notiWhite.png') }}"/>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="text-center titlePicto">
+            Réalisé par Dechoix ©
+        </footer>
+    </div>
+{% endblock %}
