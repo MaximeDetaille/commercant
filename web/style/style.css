@@ -213,7 +213,7 @@ body{
 }
 
 .imgCard{
-    height: 100%;
+    height: 200px;
     width: 100%;
     border-top-left-radius:5px;
     border-top-right-radius: 5px;
@@ -226,4 +226,21 @@ body{
 .cardTitle a{
     text-decoration: none;
     color:black;
+}
+
+/* PAGE PERSO */
+
+.jumboPagePerso{
+    background-image: url('../img/malta.png');
+    height: 400px;
+    padding-top: 150px;
+}
+
+.titlePagePerso{
+    color:#FFFFFF !important;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.descriptionPagePerso{
+    padding-bottom: 40px;
 }

@@ -2,10 +2,6 @@
  * Created by Maxime on 18/01/2017.
  */
 $( document ).ready(function() {
-    var pathname = $(location).attr('pathname');
-    var res = pathname.split("/");
-
-    if((res[res.length-1]=="app_dev.php") || (res[res.length-2]=="app_dev.php")){  // Permet de load seulement cette partie si l'on se trouve sur la homepage
         var tab = ["boulangerie.png","plomberie.png","pizza.png"];
         var cpt = 0
 
@@ -26,9 +22,4 @@ $( document ).ready(function() {
                 $('nav').removeClass('shrink');
             }
         });
-    }
-    else{
-        $('nav').removeClass('navbarCustom')
-        $('nav').addClass('navbarCustomPage') //On change le style de la navbar
-    }
 });
