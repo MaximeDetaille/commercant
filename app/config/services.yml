@@ -7,3 +7,7 @@ services:
     form_authenticator:
           class: AppBundle\Security\FormAuthenticator
           autowire: true
+
+    app.pagePerso_uploader:
+          class: AppBundle\FileUploader
+          arguments: ['%pagePerso%']

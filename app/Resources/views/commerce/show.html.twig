@@ -1,9 +1,9 @@
-{% extends 'siteTemplate.html.twig' %}
+{% extends 'navbar.html.twig' %}
 
 {% block title %}{{ commerce.nom }}{% endblock %}
 
 {% block body %}
-    <div class="jumbotron jumboPagePerso">
+    <div class="jumbotron jumboPagePerso" style="background-image: url({{ asset('pagePerso/'~commerce.image) }})">
         <div class="text-center">
             <h1 class="titlePagePerso">Bienvenue chez {{ commerce.nom }}</h1>
             <h3 class="titlePagePerso">{{ commerce.adresse }}, {{ commerce.ville }}, {{ commerce.codePostal }}</h3>

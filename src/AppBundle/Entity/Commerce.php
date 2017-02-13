@@ -45,9 +45,30 @@ class Commerce
     /**
      * @var string
      *
+     * @ORM\Column(name="codepostal", type="string", length=255)
+     */
+    private $codePostal;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="ville", type="string", length=255)
      */
     private $ville;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
 
     /**
      * @return string
@@ -66,13 +87,6 @@ class Commerce
     }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="codepostal", type="string", length=255)
-     */
-    private $codePostal;
-
-    /**
      * @return string
      */
     public function getCodePostal()
@@ -87,21 +101,6 @@ class Commerce
     {
         $this->codePostal = $codePostal;
     }
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255)
-     */
-    private $image;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="type", type="string", length=255)
-     */
-    private $type;
-
 
     /**
      * Get id

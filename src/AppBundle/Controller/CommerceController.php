@@ -51,6 +51,9 @@ class CommerceController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $commerce->getImage();
+            $fileName = $this->get('app.pagePerso_uploader')->upload($file);
+            $commerce->setImage($fileName);
             $em = $this->getDoctrine()->getManager();
             $em->persist($commerce);
             $em->flush($commerce);

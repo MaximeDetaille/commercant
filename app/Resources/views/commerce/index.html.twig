@@ -1,4 +1,4 @@
-{% extends 'navbar.html.twig' %}
+{% extends 'navbar-full.html.twig' %}
 
 {% block body %}
     <div class="page">
@@ -10,8 +10,8 @@
                 {% for commerce in commercesFiltred %}
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="cards">
-                        <a href="{{ path('commerce_show', { 'id': commerce.id }) }}"><img class="imgCard" src="{{ asset('img/'~commerce.image) }}"/></a>
-                        <h1 class="cardTitle"><a href="{{ path('commerce_show', { 'id': commerce.id }) }}">{{ commerce.nom }}</a></h1>
+                        <a href="{{ path('commerce_show', { 'id': commerce.id }) }}"><img class="imgCard" src="{{ asset('pagePerso/'~commerce.image) }}"/></a>
+                        <h3 class="cardTitle"><a href="{{ path('commerce_show', { 'id': commerce.id }) }}">{{ commerce.nom }}</a></h3>
                         <p class="text-center">{{ commerce.adresse }}</p>
                         <p class="text-center">{{ commerce.type }}</p>
                         </div>

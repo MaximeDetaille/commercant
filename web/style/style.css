@@ -6,10 +6,18 @@ body{
     background-color:#FB8C00;
 }
 
+.navbar-brand{
+    padding:10px;
+}
+
 .navbar-default .navbar-brand{
     margin-top: 10px;
     color:white;
     font-size:32px;
+}
+
+.navbar-full{
+    background-color:#FB8C00;
 }
 
 .navbar-default .navbar-brand:hover{
@@ -206,17 +214,18 @@ body{
 }
 
 .cards{
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
-    border-radius:5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    border-radius:2px;
     padding-bottom: 5px;
     margin-bottom: 30px;
+    height: 320px;
 }
 
 .imgCard{
     height: 200px;
     width: 100%;
-    border-top-left-radius:5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius:2px;
+    border-top-right-radius: 2px;
 }
 
 .cardTitle{
@@ -231,7 +240,8 @@ body{
 /* PAGE PERSO */
 
 .jumboPagePerso{
-    background-image: url('../img/malta.png');
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
     height: 400px;
     padding-top: 150px;
 }
